@@ -3,24 +3,954 @@
 <head>
 <meta charset="utf-8">
 <title>无标题文档</title>
+<link rel="stylesheet" href="604jjw.css">
 <style>
-	div{
-		width: 200px;
+	*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+
+/*<!------------------------整体----------------------->*/
+body{
+	background-color: white no-repeat center center;
+	background-attachment: fixed;
+	background-size: cover;	
+}
+#data,#archives,#works,#qz,#contact{
+	background-color: white;
+}
+#sy,#data,#works,#qz,#contact{
+	border-bottom: 1px solid rgba(185,185,185,0.25);
+}	
+.zt{
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
+.all{
+	width: 100%;
+	height: 850px;
+}
+.content_dhl_tab{
+	content: "";
+	width: 30px;
+	height: 4px;
+	border-radius: 18px;
+	margin: 5px auto;	
+	background:rgba(92,236,229,0.8);
+	transition: 0.25s ease-out;
+}
+.content_dhl{
+	text-align: center;
+	margin-top: 100px;
+	width: 100px;
+	margin:100px  auto 0;
+}
+.content_dhl_word{
+	font-size: 22px;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-o-user-select:none;
+	user-select:none;
+}
+.content_dhl:hover .content_dhl_tab{
+	width: 38px;
+}
+label[for="anniuone"] {
+    display: none;
+}
+.da_word{
+	text-align: center;
+	color: black;	
+}
+#anniuone{
+	display: none;
+}
+html{
+	scroll-behavior:smooth;
+}
+/*<!------------------------整体----------------------->*/
+
+
+/*<!------------------------导航栏----------------------->*/
+.dhl{
+	height: 75px;
+	width: 100%;
+	position: fixed;
+	box-shadow: 0 3px 5px rgba(195,195,195,0.7);
+	background-color:rgba(255,255,255,0.85);
+	backdrop-filter: blur(4px);
+	display: flex;
+	z-index: 10;
+}
+
+.dhl ul{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	margin:0 10%;	
+}
+.dhl ul li{
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width:100px;
+	height: 50px;
+	margin-right: 3%;
+}
+ul li a:hover{
+	background-color:rgba(188,188,188,0.22);
+}
+ul li a:active{
+	background-color:rgba(188,188,188,0.4);
+}
+.dhl ul li a{
+	text-decoration: none;
+	color:black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 80px;
+	height: 45px;
+	border-radius: 12px;
+	font-size: 15px;
+}
+@media screen and (max-width: 740px){
+	.dhl{
+		height: 80px;
+	}
+	.dhl ul{
+		display:none;
+		width:30%;
+		height: 1000px;
+		margin: 0;
+		left: -220px;
+		box-shadow: 3px 0 5px rgba(195,195,195,0.4);
+		background-color:rgba(255,255,255,0.98);
+		backdrop-filter: blur(4px);
+		flex-direction: column;
+		position:absolute;
+		z-index: -10;
+	}
+	.dhl ul li{
+	margin:5px auto 10px;
+	width: 100%;
+	}
+	.dhl ul li:nth-child(1){
+	margin-top: 90px;
+	}
+	.dhl ul li a{
+	width: 100%;
+	height: 100%;
+	border-radius:0px;
+	}
+	.dhl ul li a:hover{
+	background-color:rgba(188,188,188,0.22);
+	box-shadow:none;
+	}
+	.dhl ul li a:active{
+	background-color:rgba(188,188,188,0.4);
+	box-shadow:none;
+	}
+	label[for="anniuone"] {
+        width: 50px;
+        height: 40px;
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+		margin:15px 20px;		
+    	z-index: 2; 		
+	}	
+	label[for="anniuone"]:hover {
+		color:rgba(101,230,251,0.6);
+		margin: 14px 0 0 21px ;
+	}
+	#anniuone:checked ~ ul{
+		display: flex;
+		left: 0;
+		animation: c 0.45s;
+		-webkit-animation:c 0.45s;
+	}
+	@keyframes c{
+		from{left:-220px;}
+		to{left: 0;}
+	}
+}
+/*<!------------------------导航栏----------------------->*/
+
+
+/*<!------------------------首页----------------------->*/
+.welcome{
+	width: 100%;
+	margin: 350px auto;
+	position: fixed;
+	z-index: -1;
+	text-align: center;
+	animation: wc 1.5s ease 1;
+	font-size:35px;
+}
+@keyframes wc{
+	0%{opacity: 0;margin: 420px auto;filter: blur(2px)}
+	100%{opacity: 1;filter: blur(0)}
+}
+.balloneo{
+	position:fixed;
+	margin:330px -260px;
+	width: 100%;
+	z-index: -2;
+	animation: blo 3s infinite alternate;
+}
+.ballone{
+	margin: 0 auto;
+	z-index: -2;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	background-color: aquamarine;
+}
+.balltwoo{
+	position:fixed;
+	margin:360px 270px;
+	width: 100%;
+	z-index: -2;
+	animation:blt 3s infinite alternate;
+}
+.balltwo{
+	margin: 0 auto;
+	z-index: -2;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	background-color:cornflowerblue;
+}
+@keyframes blo{
+	0%{margin:300px -290px;filter:blur(0px);}
+	100%{filter: blur(1px);}
+}
+@keyframes blt{
+	0%{margin:420px 295px;filter: blur(0px);}
+	100%{filter: blur(1px);}
+}
+
+@media screen and (max-width: 940px){
+.welcome{
+	font-size: 30px;
+}
+.balloneo{
+	margin:330px -230px;
+}
+.balltwoo{
+	margin:360px 228px;
+}
+@keyframes blo{
+	0%{margin:300px -270px;filter:blur(0px);}
+	100%{filter: blur(1px);}
+}
+@keyframes blt{
+	0%{margin:400px 265px;filter: blur(0px);}
+	100%{filter: blur(1px);}
+}
+}
+@media screen and (max-width: 700px){
+.welcome{
+	font-size: 25px;
+}
+.balloneo{
+	margin:330px -185px;
+}
+.balltwoo{
+	margin:360px 185px;
+}
+@keyframes blo{
+	0%{margin:300px -220px;filter:blur(0px);}
+	100%{filter: blur(1px);}
+}
+@keyframes blt{
+	0%{margin:400px 215px;filter: blur(0px);}
+	100%{filter: blur(1px);}
+}
+}
+
+/*<!------------------------首页----------------------->*/
+
+/*<!------------------------资料----------------------->*/
+.data_content{
+	margin:10px 40px;
+	max-width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	justify-content: center;
+}
+.data_one{
+	width: 150px;
+	height: 250px;
+	margin:100px 10px 80px auto;
+}
+.data_two{
+	display: flex;
+	max-width: 40%;
+	flex-direction: row;
+	margin:100px auto 80px 20px;
+}
+
+.data_two_left{
+	text-align: center;
+	margin: 0 auto;
+}
+.data_two_lefto{
+	background-color:rgba(188,188,188,0.12);
+	border-radius: 12px;
+	margin:20px auto;
+	padding: 10px;
+}
+.data_two_lefto:hover{
+	background-color:rgba(188,188,188,0.2);
+}
+.data_two_right{
+	max-width: 60%;
+	margin:20px auto;
+}
+
+
+@media screen and (max-width: 940px){
+.data_content{
+		flex-direction: column;
+}
+.data_one{
+	max-width:40%;
+	height: 210px;
+	margin:30px auto 0;	
+}
+.data_two{
+	flex-direction: column;
+	max-width:100%;
+	margin:auto;		
+}
+.data_two_left{
+	display: flex;
+	flex-direction:row;
+	max-width:100%;
+	margin-top:10px;
+}
+.data_two_lefto{
+	margin:20px 5px;	
+}
+.data_two_right{
+	max-width: 100%;
+	margin:20px 25px;
+}
+
+}	
+/*<!------------------------资料----------------------->*/
+
+/*<!------------------------档案----------------------->*/
+.archives_content{
+	margin:10px 40px;
+}
+.educational_top_one{
+	margin: 1% 3% 0;
+	width:100px;
+	height: 30px;
+	border-left:15px solid rgba(0,255,251,0.5); 
+	border-bottom: 3px solid rgba(0,255,251,0.5);
+}
+.educational_top_two{
+	margin: 1% 3% 0; 
+}
+.educational_bottom_one{
+	margin: 20px 3%;
+	width:100px;
+	height: 30px;
+	border-left:15px solid aqua; 
+	border-bottom: 3px solid aqua;	
+}
+
+.educational_bottom_two{
+	display: flex;
+	flex-wrap: wrap;
+	margin:10px 30px;
+	overflow:hidden;
+}
+.educational_block{
+	margin: 60px auto 20px;
+	height: 100px;
+	max-width: 25%;
+	display: flex;
+	justify-content: center;
+	
+}
+.educational_block_o{
+	margin: 0 3%;
+	box-shadow:1px 1px 10px rgba(229,229,229,1.00),-1px -1px 10px rgba(229,229,229,1.00);
+	display: flex;
+	border-radius: 10px;
+	width: 550px;
+}
+.educational_block_o p{
+	margin: 0 auto;
+	line-height:100px;
+	text-align: center;
+}
+.educational_block_o img{
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 1180px) {
+.educational_block {
+	margin-top: 60px;
+	max-width: 30%;
+}
+.educational_block_o img{
+	margin:0 auto;
+}
+}
+@media screen and (max-width: 868px) {
+	.educational_block {
+	margin-top: 25px;
+	max-width: 50%;
+}
+	.educational_block_o img{
+	width: 40%;
+	height: 60%;
+	margin: auto;
+}
+}
+
+
+/*<!------------------------档案----------------------->*/
+
+/*<!------------------------作品----------------------->*/
+.works_content{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin:10px 30px;
+	overflow:hidden;
+}
+.works_block{
+	max-width: 32%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	
+}
+.works_block_o:hover{
+	position: relative;
+	bottom:1px;
+	box-shadow:5px 5px 20px rgba(229,229,229,1.00),-5px -5px 20px rgba(229,229,229,1.00);
+	transition: all 0.3s;
+}
+.works_block_o{
+	display: flex;
+	border: solid 1px rgba(228,228,228,0.8);
+	border-radius: 10px;
+	width: 400px;
+	max-height: 80%;
+	height:200px;
+	margin: 80px 10px 30px;
+}
+.works_block_olink{
+	width: 100%;
+	height: 100%;
+}
+.works_png{
+	z-index: -1;
+	background:url(图片/zp.png);
+	width: 100%;
+	height: 110%;
+	margin:-20px auto;
+}
+.works_block_o{
+	overflow: hidden;
+}
+	
+
+@media screen and (max-width: 1080px) {
+	.works_block {
+		max-width: 40%;
+	}
+	.works_block_o{
+		margin:3% 3% 0 3%;
+	}
+	.works_png{
+		height: 120%;
+		width: 120%;
+		margin:-20px -20px;
+	}
+}
+@media screen and (max-width: 768px) {
+	.works_block {
+		max-width: 48%;
+	}
+	.works_block_o{
 		height: 100px;
-		border:2px dashed black;
+		margin:40px 10px;
 	}
-	.two{
-		margin-top: 30px;
-		border:2px dashed black;
-		z-index: -2;
-		background-color:green;
-		transform: skew(-30deg,-20deg);
+	.works_png{
+		height: 350%;
+		width: 130%;
+		margin:-80px -40px;
 	}
-</style>
+}
+/*<!---------------------作品----------------------->*/
+
+/*<!---------------------意向----------------------->*/
+	.intention_content{
+		display: flex;
+		flex-direction: row;
+		margin:10px 40px;
+	}
+	.intention_left{
+		width:50%;
+		margin: 0 0 0 40px;
+		display: flex;
+		flex-direction: row;
+	}
+	.intention_left_all{
+		width: 30px;
+	}
+	.intention_left_one{
+		margin: 240px 3% 0 10%;
+		height: 220px;
+		background-color:rgba(249,206,79,0.9);
+	}
+	.intention_left_two{
+		height: 180px;
+		margin: 280px 3%;
+		background-color:rgba(114,182,245,0.9);
+	}
+	.intention_left_three{
+		height: 180px;
+		margin: 280px 3%;
+		background-color:rgba(255,177,30,0.9);
+	}
+	.intention_left_four{
+		height: 200px;
+		margin: 260px 3%;
+		background-color:rgba(157,218,252,0.9);
+	}
+	.intention_left_five{
+		height: 150px;
+		margin: 310px 3%;
+		background-color:rgba(245,47,51,0.9);
+	}
+	.intention_right{
+		width:45%;	
+	}
+	.intention_right ul{
+		margin: 260px 10%;
+	}
+	.intention_right ul li{
+		margin: 20px auto;
+	}
+	.intention_left_all_{
+		width: 90%;
+		display: flex;
+		flex-direction: row;
+		margin: 0 auto;
+	}
+	
+	@media screen and (max-width: 740px){
+	.intention_content{
+		flex-direction: column;
+	}
+	.intention_left{
+		width: 100%;
+		margin: 0;
+	}
+	.intention_right{
+		width: 100%;
+	}
+	.intention_right ul{
+		margin: 100px 10% 0;
+	}
+	.intention_left_one{
+		margin: 120px 5% 0 10%;
+	}
+	.intention_left_two{
+		margin: 160px 5% 0;
+	}
+	.intention_left_three{
+		margin: 160px 5% 0;
+	}
+	.intention_left_four{
+		margin: 140px 5% 0;
+	}
+	.intention_left_five{
+		margin: 190px 10% 0 5%;
+	}
+	.intention_left_all_{
+		width: 100%;	
+	}
+	}
+/*<!---------------------意向----------------------->*/
+/*<!---------------------联系----------------------->*/
+.contact_content{
+	margin:10px 40px;
+}
+.contact_one{
+	text-align: center;
+	margin: 5px 0;
+	font-size: 20px;
+}
+.contact_two{
+	display: flex;
+}
+.contact_two_left,.contact_two_right{
+	margin-left: 15%;
+}
+#t1{
+	width: 150px;
+	height: 30px;
+}
+#t2{
+	width: 300px;
+	height: 30px;
+}
+#t3{
+	width: 350px;
+	height: 150px;
+	padding: 2px;
+}
+.xinxip{
+	font-size: 20px;
+	font-weight: 550;
+	margin: 20px 15%;
+}
+#t4{
+	width: 80px;
+	height: 35px;
+}
+form input,#t3{
+	border-radius: 8px;
+	border: solid 1px rgba(228,228,228,1);
+	color: black;
+	background-color:rgba(188,188,188,0.15);
+	margin: 10px 10px;
+}
+form input:focus{
+ 	background-color:rgba(188,188,188,0.22);
+  	box-shadow:inset 2px 2px 2px rgba(0, 0, 0, .2);
+}
+#t3:focus{
+	background-color:rgba(188,188,188,0.22);
+ 	box-shadow:inset 2px 2px 2px rgba(0, 0, 0, .2);
+}
+form dl>dd{
+	margin: 1px 0 0 10px;
+}
+
+@media screen and (max-width: 1500px){
+	.xinxip{
+		margin-left:10%;
+	}
+.contact_two_left,.contact_two_right{
+	margin-left:10%;
+}
+}
+@media screen and (max-width: 940px){
+.xinxip{
+		margin: 10px 5%;
+}
+.contact_two_left,.contact_two_right{
+		margin-left: 5%;
+	}
+#t1{width: 120px;}
+#t2{width: 200px;}
+#t3{width: 310px;}
+}
+@media screen and (max-width: 640px){
+.contact_one{
+	font-size: 16px;
+}
+.contact_two{
+	flex-direction: column;
+	transition:all 1s;
+}
+}
+/*<!---------------------联系----------------------->*/
+</style>	
 </head>
 
 <body>
-<div class="one">宽200px，高100px</div>
-<div class="two">宽放大0.9，高放大2倍</div>
+<div class="dhl">
+	<input type="checkbox" id="anniuone">
+    <label for="anniuone">&equiv;</label>
+		<ul><li><a href="#">首页</a></li>
+			<li><a href="#data">个人资料</a></li>
+			<li><a href="#archives">个人档案</a></li>
+			<li><a href="#works">作品展示</a></li>
+			<li><a href="#qz">求职意向</a></li>
+			<li><a href="#contact">联系方式</a></li>
+		</ul>
+</div>
+<!------------------------------------------------>
+<div class="zt">
+	<div id="sy" class="all">
+	<div class="balloneo">
+	<div class="ballone"></div>
+	</div>
+	<div class="welcome"><p>欢迎过来到蒋嘉文的个人求职网页</p></div>
+	<div class="balltwoo">
+	<div class="balltwo"></div>
+	</div>
+	</div>
+<!------------------------------------------------>
+<div id="data" class="all">
+	<div class="content_dhl">
+	<p class="content_dhl_word">资料</p>
+	<div class="content_dhl_tab"></div>
+	</div>
+	
+	<div class="data_content">
+	<div class="data_one">
+		<img src="图片/zl.png">
+	</div>
+	<div class="data_two">
+	<div class="data_two_left">
+		<div class="data_two_name data_two_lefto">姓名：蒋嘉文</div>
+		<div class="data_two_age data_two_lefto">年龄：19</div>
+		<div class="data_two_sex data_two_lefto">性别：男</div>
+	</div>
+	<div class="data_two_right">
+	<div class="data_two_righto">
+	民族：汉族<br/>
+	国籍：中国<br/>
+	籍贯：广东江门市<br/>
+	政治面貌：群众<br/>
+	学历：大专<br/>
+	在校大学生，就读于广东建设职业技术学院-建筑信息系-软件技术专业
+	</div> 
+	</div>
+	</div>	
+	</div>	
+</div>
+<!------------------------------------------------>
+<div id="archives" class="all">
+	<div class="content_dhl">
+	<p class="content_dhl_word">档案</p>
+	<div class="content_dhl_tab"></div>
+	</div>
+<div class="archives_content">
+	<div class="educational_top_one">
+	<p style="font-size: 20px;"><strong>教育背景</strong></p>
+	</div>
+	<div class="educational_top_two">
+	2021.10 —— 2023.6
+	广东建设职业技术学院
+	</div>
+	<div class="educational_bottom_one">
+	<p style="font-size: 20px;"><strong>主修课程</strong></p>
+	</div>
+	<div class="educational_bottom_two">
+		<div class="educational_block">
+		<div class="educational_block_o">
+		<p>PS</p>
+		<img src="图片/1.png">
+		</div>
+		</div>
+		
+		<div class="educational_block">
+		<div class="educational_block_o">
+		<p>JAVA</p>
+		<img src="图片/2.png">
+		</div>
+		</div>
+		
+		<div class="educational_block">
+		<div class="educational_block_o">
+		<p>C语言</p>
+		<img src="图片/3.png">
+		</div>
+		</div>
+
+		
+		<div class="educational_block">
+		<div class="educational_block_o">
+		<p>HTML</p>
+		<img src="图片/4.png">
+		</div>
+		</div>
+	
+		<div class="educational_block">
+		<div class="educational_block_o">
+		<p>MYSQL</p>
+		<img src="图片/5.png">
+		</div>
+		</div>
+	
+		<div class="educational_block">
+		<div class="educational_block_o">
+		<p>数据结构</p>
+		<img src="图片/6.png">
+		</div>
+		</div>
+</div>	
+</div>
+</div>
+<!------------------------------------------------>	
+<div id="works" class="all">
+		<div class="content_dhl">
+		<p class="content_dhl_word">作品</p>
+		<div class="content_dhl_tab"></div>
+		</div>
+	
+		<div class="works_content">
+		
+		<div class="works_block">
+		<div class="works_block_o">
+		<a href="#" class="works_block_olink">
+		<div class="works_png">
+		</div>
+		</a>
+		</div>
+		</div>
+		
+		<div class="works_block">
+		<div class="works_block_o">
+		<a href="#" class="works_block_olink">
+		<div class="works_png">
+		</div>
+		</a>
+		</div>
+		</div>
+		
+		<div class="works_block">
+		<div class="works_block_o">
+		<a href="#" class="works_block_olink">
+		<div class="works_png">
+		</div>
+		</a>
+		</div>
+		</div>
+		
+		<div class="works_block">
+		<div class="works_block_o">
+		<a href="#" class="works_block_olink">
+		<div class="works_png">
+		</div>
+		</a>
+		</div>
+		</div>
+		
+		<div class="works_block">
+		<div class="works_block_o">
+		<a href="#" class="works_block_olink">
+		<div class="works_png">
+		</div>
+		</a>
+		</div>
+		</div>
+		
+		<div class="works_block">
+		<div class="works_block_o">
+		<a href="#" class="works_block_olink">
+		<div class="works_png">
+		</div>
+		</a>
+		</div>
+		</div>		
+	</div>
+</div>
+<!------------------------------------------------>
+	<div id="qz" class="all">
+	<div class="content_dhl">
+	<p class="content_dhl_word">意向</p>
+	<div class="content_dhl_tab"></div>
+	</div>
+	<div class="intention_content">
+	
+	<div class="intention_left">
+	<p style="position: absolute;margin: 50px;font-size: 22px;font-weight: 600;">个人能力</p>
+	<div class="intention_left_all_">
+	<div class="intention_left_one intention_left_all">
+	<p style="font-size: 8px;position: absolute;margin: 5px auto;">50%</p>
+	<p style="line-height: 500px;margin:0 -6PX;height: 220px;">HTML</p>
+	</div>
+	
+	<div class="intention_left_two intention_left_all">
+	<p style="font-size: 8px;position: absolute;margin: 5px auto;">45%</p>
+	<p style="line-height: 420px;margin:0 -4PX;height: 180px;">JAVA</p>	
+	</div>
+	
+	<div class="intention_left_three intention_left_all">
+	<p style="font-size: 8px;position: absolute;margin: 5px auto;">45%</p>
+	<p style="line-height: 420px;margin:0 -10PX;height: 180px;">MYSQL</p>	
+	</div>
+	
+	<div class="intention_left_four intention_left_all">
+	<p style="font-size: 8px;position: absolute;margin: 5px auto;">48%</p>
+		<p style="line-height: 460px;margin:0 4PX;height: 200px;">PS</p>	
+	</div>
+	
+	
+	<div class="intention_left_five intention_left_all">
+	<p style="font-size: 8px;position: absolute;margin: 5px auto;">40%</p>
+	<p style="line-height: 360px;margin:0 -10PX;height: 150px;">C语言</p>	
+	</div>
+		
+	</div>
+	</div>
+	<div class="intention_right">
+	<p style="position: absolute;margin: 50px;font-size: 22px;font-weight: 600;">求职意向</p>
+	<ul>
+		<li>	网页设计类工作 ，对静态网站进行开发，网页设计师</li>
+		<li>	程序设计类，程序开发、程序维护，设计人员，初级程序员</li>
+		<li>	参与需求调研、项目可行性分析、技术可行性分析和需求分析</li>					
+	</ul>	
+	</div>
+	</div>
+	</div>	
+<!------------------------------------------------>
+	<div id="contact" class="all">
+	<div class="content_dhl">
+	<p class="content_dhl_word">联系</p>
+	<div class="content_dhl_tab"></div>
+	</div>
+	
+	<div class="contact_content">
+	<div class="contact_one">
+	<p class="contact_one_p">如果你愿意给我一个机会，请通过以下信息联系我</p>
+	</div>
+	<p class="xinxip">请填写你的信息</p>
+	<div class="contact_two">
+	<div class="contact_two_left">
+	<form>
+		<dl>		
+			<dd>名字：<input type="text" id="t1"  placeholder="请输入昵称"></dd>
+		</dl>
+		<dl>
+			<dd>Email:<input type="text" id="t2" placeholder="请输入你的邮箱"></dd>
+		</dl>
+		<dl>
+			<dt style="margin-left: 10px;">留言：</dt>
+			<dd><textarea id="t3" placeholder="请留言"></textarea></dd>
+		</dl>
+		<input type="submit" id="t4" value="提交">
+	</form>
+	
+	</div>
+	<div class="contact_two_right">
+		<p style="font-size: 20px;margin:10px 0;">邮寄地址</p>
+		广东清远市清城区东城街道环城东路38号<br/>广东建设职业技术学院清远校区<br/>邮编511500<br/>
+		<p style="font-size: 20px; margin: 10px 0;">其他</p>
+		联系电话: 134-888-8888<br/>
+		电子邮箱: 1131051662@qq.com
+	</div>
+	</div>	
+	</div>
+	</div>
+	<!------------------------------------------------>
+	<div id="header">
+	<p class="da_word">&copy;2022|21软件6班</p>	
+	</div>
+</div>
 </body>
 </html>
